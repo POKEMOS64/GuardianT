@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.GardianT" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimaryContainer</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+        <item name="colorSecondaryContainer">@color/secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/onSecondaryContainer</item>
+
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/onTertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/onTertiaryContainer</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/onBackground</item>
+
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorSurfaceVariant">@color/surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/onSurfaceVariant</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/onError</item>
+        <item name="colorErrorContainer">@color/errorContainer</item>
+        <item name="colorOnErrorContainer">@color/onErrorContainer</item>
+
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/outlineVariant</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryContainer</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+
+        <!-- Убрали ссылки на шрифты Poppins -->
+    </style>
+
+    <!-- Тема "Терминал" (Matrix Style) -->
+    <style name="Theme.GardianT.Terminal" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#00FF00</item> <!-- Ядовито-зеленый -->
+        <item name="colorOnPrimary">#000000</item>
+        <item name="colorPrimaryContainer">#003300</item>
+        <item name="colorOnPrimaryContainer">#00FF00</item>
+
+        <item name="colorSecondary">#00CC00</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="colorSecondaryContainer">#002200</item>
+        <item name="colorOnSecondaryContainer">#00CC00</item>
+
+        <item name="android:colorBackground">#000000</item> <!-- Черный фон -->
+        <item name="colorOnBackground">#00FF00</item>
+
+        <item name="colorSurface">#000000</item>
+        <item name="colorOnSurface">#00FF00</item>
+        <item name="colorSurfaceVariant">#111111</item>
+        <item name="colorOnSurfaceVariant">#00AA00</item>
+
+        <item name="colorOutline">#005500</item>
+        <item name="colorOutlineVariant">#003300</item>
+
+        <item name="colorError">#FF0000</item>
+        <item name="colorOnError">#000000</item>
+
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+
+        <item name="fontFamily">monospace</item> <!-- Шрифт как в терминале -->
+    </style>
+</resources>

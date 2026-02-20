@@ -1,0 +1,29 @@
+# Android Studio & Gradle
+*.iml
+.gradle/
+.idea/
+/build/
+/app/build/
+/local.properties
+
+# Native C++
+.externalNativeBuild
+.cxx/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Google Services & Secrets (ВАЖНО)
+google-services.json
+secrets.xml
+
+# Keystores (Ключи подписи)
+*.jks
+*.keystore
+key.properties
+
+# Build outputs
+*.apk
+*.aab
+captures/

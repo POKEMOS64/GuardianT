@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="success">#4CAF50</color>
+    <color name="error">#B00020</color>
+    <color name="primary">#6750A4</color>
+    <color name="outline">#79747E</color>
+    <color name="onSuccess">#FFFFFF</color>
+    <color name="onError">#FFFFFF</color>
+    <color name="onPrimary">#FFFFFF</color>
+</resources>

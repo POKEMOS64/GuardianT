@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_chats"
+        android:icon="@drawable/ic_chat"
+        android:title="Чаты" />
+    <item
+        android:id="@+id/nav_trunk"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Багаж" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_device"
+        android:title="Устройство" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_account_circle"
+        android:title="Профиль" />
+</menu>
