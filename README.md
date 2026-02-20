@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="LOGO.png" alt="GuardianT Logo" width="200"/>
+  <img src="LOGO.png" alt="GuardianT Logo" width="700"/>
 </p>
 
 # GuardianT Ecosystem
@@ -20,10 +20,10 @@ This repository contains the source code for all components of the GuardianT eco
 
 ## Gallery
 
-<!-- Add screenshots here. Example: -->
-<img src="docs/app_screen.png" width="200" /> <img src="docs/Dev-client-01.png" width="500" /> 
-<img src="docs/app_screen.png" width="200" /> <img src="docs/Dev-client-02.png" width="500" /> 
-<img src="docs/app_screen.png" width="200" /> <img src="docs/fin.png" width="500" /> 
+| Mobile App | Hardware |
+|:---:|:---:|
+| <img src="docs/sc-01.png" width="700" /> | <img src="docs/sc-02.png" width="700" /> |
+| <img src="docs/sc-03.png" width="700" /> | <img src="docs/fin.png" width="700" /> |
 
 
 ## Getting Started
@@ -61,8 +61,10 @@ GuardianT — это экосистема защищенной связи с о�
 
 ## Галерея
 
-<!-- Добавьте скриншоты сюда -->
-*(Разместите скриншоты приложения и фото устройства в папке 'docs' и добавьте ссылки сюда)*
+
+| Интерфейс | Устройство |
+|:---:|:---:|
+| <img src="docs/sc-04.png" width="700" /> | <img src="docs/sc-05.png" width="700" /> |
 
 ## Начало работы
 
