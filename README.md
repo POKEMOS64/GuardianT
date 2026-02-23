@@ -1,87 +1,51 @@
+# GuardianT: Цифровой Суверенитет
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/platform-ESP32%20%7C%20Docker-blue)](https://github.com/POKEMOS64/GuardianT)
+[![Status](https://img.shields.io/badge/status-Experimental-red)](https://polevoy-craft.ru/guardiant/)
 
-<p align="center">
-  <img src="LOGO.png" alt="GuardianT Logo" width="700"/>
-</p>
+**GuardianT** — это экспериментальная Open Source экосистема защищенной связи, реализующая принцип **«Слепого курьера»** (Blind Courier).
 
-# GuardianT Ecosystem
-
-**Privacy. Sovereignty. Hardware Security.**
-
-GuardianT is an open-source secure communication ecosystem that combines a physical hardware key, a mobile application, and a self-hosted server to ensure absolute privacy.
-
-## Project Structure
-
-This repository contains the source code for all components of the GuardianT ecosystem:
-
-*   **[📂 server/](./server)** - The backend server (FastAPI). "Blind courier" architecture.
-*   **[📂 android/](./android)** - The Android mobile application (Kotlin).
-*   **[📂 firmware/](./firmware)** - Firmware for the hardware key (ESP8266/ESP32).
-
-## Gallery
-
-| Mobile App | Hardware |
-|:---:|:---:|
-| <img src="docs/sc-01.png" width="700" /> | <img src="docs/sc-02.png" width="700" /> |
-| <img src="docs/sc-03.png" width="700" /> | <img src="docs/fin.png" width="700" /> |
-
-
-## Getting Started
-
-To deploy the full ecosystem:
-
-1.  **Server:** Set up your own VDS or local server using the code in `server/`.
-2.  **Hardware:** Flash your ESP device using the code in `firmware/`.
-3.  **App:** Build and install the Android app from `android/`.
-
-## License
-
-This project is distributed under a dual-license model:
-
-*   **Software (Server & App):** GNU Affero General Public License v3 (AGPL-3.0)
-*   **Hardware (Schematics & Firmware):** CERN Open Hardware Licence v2 - Strongly Reciprocal (CERN-OHL-S)
-
-See the LICENSE file for the full legal text and disclaimer.
+> 📘 **Полная документация и разбор архитектуры:** [polevoy-craft.ru/guardiant/](https://polevoy-craft.ru/guardiant/)
 
 ---
 
-# Экосистема GuardianT
+## 🏴‍☠️ Концепция
 
-**Приватность. Суверенитет. Аппаратная защита.**
+В современном мире данные — это новая нефть. Мессенджеры хранят вашу переписку, метаданные и социальные графы. **GuardianT** идет от обратного. Мы строим архитектуру вокруг **отсутствия знаний**.
 
-GuardianT — это экосистема защищенной связи с открытым исходным кодом, которая объединяет физический аппаратный ключ, мобильное приложение и собственный сервер для обеспечения абсолютной конфиденциальности.
+*   **Zero-Knowledge Server:** Сервер не хранит историю сообщений. Данные существуют в RAM только до момента доставки.
+*   **Hardware Encryption:** Ключи шифрования генерируются и хранятся в изолированном аппаратном модуле (ESP32), а не в операционной системе смартфона.
+*   **Trustless Architecture:** Вам не нужно доверять серверу. Даже если сервер скомпрометирован, злоумышленник увидит лишь зашифрованный мусор.
 
-## Структура проекта
+## 🛠 Структура репозитория
 
-Этот репозиторий содержит исходный код для всех компонентов экосистемы GuardianT:
+Проект разделен на независимые модули:
 
-*   **📂 server/** - Бэкенд-сервер (FastAPI). Архитектура "Слепой курьер".
-*   **📂 android/** - Мобильное приложение для Android (Kotlin).
-*   **📂 firmware/** - Прошивка для аппаратного ключа (ESP8266/ESP32).
+| Модуль | Описание | Технологии |
+| :--- | :--- | :--- |
+| **[/Firmware](./Firmware)** | Прошивка аппаратного ключа | C++, ESP-IDF, mbedtls |
+| **[/Server](./Server)** | Серверная часть ("Слепой курьер") | Python, FastAPI, Docker |
+| **[/Client](./Client)** | Клиентское приложение (Терминал) | Vue.js, PWA / Flutter |
 
-## Галерея
+## 📚 Образовательные материалы
 
+Мы ведем подробный инженерный дневник, где разбираем проект как научную работу:
 
-| Интерфейс | Устройство |
-|:---:|:---:|
-| <img src="docs/sc-04.png" width="700" /> | <img src="docs/sc-05.png" width="700" /> |
+1.  **[Архитектура Zero-Knowledge](https://polevoy-craft.ru/guardiant/chapter-1-architecture-zero-knowledge/)** — Почему сервер должен быть слепым? Модель угроз.
+2.  **[Аппаратный ключ (GuardianT Key)](https://polevoy-craft.ru/guardiant/chapter-2-hardware-security-module/)** — Схемотехника ESP32, работа с дисплеем и криптоядром.
+3.  **[Сервер и Протокол](https://polevoy-craft.ru/guardiant/chapter-3-protocol-and-transport/)** — Docker-контейнеризация, Nginx и бинарные протоколы.
 
-## Начало работы
+## 🚀 Быстрый старт (Self-Hosted)
 
-Чтобы развернуть полную экосистему:
+Вы можете развернуть свой сервер GuardianT одной командой:
 
-1.  **Сервер:** Настройте свой собственный VDS или локальный сервер, используя код из папки `server/`.
-2.  **Железо:** Прошейте устройство ESP, используя код из папки `firmware/`.
-3.  **Приложение:** Соберите и установите Android-приложение из папки `android/`.
-
-## Лицензия
-
-Этот проект распространяется по модели двойного лицензирования:
-
-*   **Программное обеспечение (Сервер и Приложение):** GNU Affero General Public License v3 (AGPL-3.0)
-*   **Аппаратное обеспечение (Схемы и Прошивка):** CERN Open Hardware Licence v2 - Strongly Reciprocal (CERN-OHL-S)
-
-Смотрите файл LICENSE для полного юридического текста и отказа от ответственности.
+```bash
+git clone https://github.com/POKEMOS64/GuardianT.git
+cd GuardianT
+docker-compose up -d
+```
 
 ---
-*Copyright (C) 2026 GuardianT Project*
+
+*Разработано [Sergey Polevoy](https://polevoy-craft.ru) в рамках исследования цифрового суверенитета.*
