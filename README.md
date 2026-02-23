@@ -1,7 +1,9 @@
 # GuardianT: Цифровой Суверенитет
 
+![GuardianT Logo](LOGO.png)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform](https://img.shields.io/badge/platform-ESP32%20%7C%20Docker-blue)](https://github.com/POKEMOS64/GuardianT)
+[![Platform](https://img.shields.io/badge/platform-ESP32%20%7C%20Android-blue)](https://github.com/POKEMOS64/GuardianT)
 [![Status](https://img.shields.io/badge/status-Experimental-red)](https://polevoy-craft.ru/guardiant/)
 
 **GuardianT** — это экспериментальная Open Source экосистема защищенной связи, реализующая принцип **«Слепого курьера»** (Blind Courier).
@@ -24,9 +26,9 @@
 
 | Модуль | Описание | Технологии |
 | :--- | :--- | :--- |
-| **[/Firmware](./Firmware)** | Прошивка аппаратного ключа | C++, ESP-IDF, mbedtls |
-| **[/Server](./Server)** | Серверная часть ("Слепой курьер") | Python, FastAPI, Docker |
-| **[/Client](./Client)** | Клиентское приложение (Терминал) | Vue.js, PWA / Flutter |
+| **[/firmware](./firmware)** | Прошивка аппаратного ключа | C++, ESP-IDF, mbedtls |
+| **[/server](./server)** | Серверная часть ("Слепой курьер") | Python, FastAPI |
+| **[/android](./android)** | Клиентское приложение (Android) | Java/Kotlin, Android SDK |
 
 ## 📚 Образовательные материалы
 
@@ -35,17 +37,5 @@
 1.  **[Архитектура Zero-Knowledge](https://polevoy-craft.ru/guardiant/chapter-1-architecture-zero-knowledge/)** — Почему сервер должен быть слепым? Модель угроз.
 2.  **[Аппаратный ключ (GuardianT Key)](https://polevoy-craft.ru/guardiant/chapter-2-hardware-security-module/)** — Схемотехника ESP32, работа с дисплеем и криптоядром.
 3.  **[Сервер и Протокол](https://polevoy-craft.ru/guardiant/chapter-3-protocol-and-transport/)** — Docker-контейнеризация, Nginx и бинарные протоколы.
-
-## 🚀 Быстрый старт (Self-Hosted)
-
-Вы можете развернуть свой сервер GuardianT одной командой:
-
-```bash
-git clone https://github.com/POKEMOS64/GuardianT.git
-cd GuardianT
-docker-compose up -d
-```
-
----
 
 *Разработано [Sergey Polevoy](https://polevoy-craft.ru) в рамках исследования цифрового суверенитета.*
